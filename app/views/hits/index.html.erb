@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing #1 Hits</h1>
+
+<ul>
+  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'About Me', about_path %></li>
+  <li><%= link_to '#1 Hits', hits_path %></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Featured</th>
+      <th>Album</th>
+      <th>Weeks at top</th>
+      <th>First week</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hits.each do |hit| %>
+      <tr>
+        <td><%= hit.title %></td>
+        <td><%= hit.artist %></td>
+        <td><%= hit.featured %></td>
+        <td><%= hit.album %></td>
+        <td><%= hit.weeks_at_top %></td>
+        <td><%= hit.first_week %></td>
+        <td><%= link_to 'Show', hit %></td>
+        <td><%= link_to 'Edit', edit_hit_path(hit) %></td>
+        <td><%= link_to 'Destroy', hit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hit', new_hit_path %>

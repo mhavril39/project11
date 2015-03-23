@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hit.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @hit.artist %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @hit.featured %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @hit.album %>
+</p>
+
+<p>
+  <strong>Weeks at top:</strong>
+  <%= @hit.weeks_at_top %>
+</p>
+
+<p>
+  <strong>First week:</strong>
+  <%= @hit.first_week %>
+</p>
+
+<%= link_to 'Edit', edit_hit_path(@hit) %> |
+<%= link_to 'Back', hits_path %>

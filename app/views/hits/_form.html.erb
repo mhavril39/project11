@@ -1,0 +1,41 @@
+<%= form_for(@hit) do |f| %>
+  <% if @hit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hit.errors.count, "error") %> prohibited this hit from being saved:</h2>
+
+      <ul>
+      <% @hit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :artist %><br>
+    <%= f.text_area :artist %>
+  </div>
+  <div class="field">
+    <%= f.label :featured %><br>
+    <%= f.text_area :featured %>
+  </div>
+  <div class="field">
+    <%= f.label :album %><br>
+    <%= f.text_area :album %>
+  </div>
+  <div class="field">
+    <%= f.label :weeks_at_top %><br>
+    <%= f.number_field :weeks_at_top %>
+  </div>
+  <div class="field">
+    <%= f.label :first_week %><br>
+    <%= f.date_select :first_week %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
