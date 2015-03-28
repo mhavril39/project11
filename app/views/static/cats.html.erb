@@ -1,8 +1,8 @@
 <h1>Cats!</h1>
-<ul>
+<ul class="navbar">
   <li><%= link_to 'Home', root_path %></li>
-  <li><%= link_to 'About', about_path %></li>
-  <li><%= link_to 'Cat Pictures', cat_pictures_path %></li>
+  <li><%= link_to 'About Me', about_path %></li>
+  <li><%= link_to '#1 Hits', hits_path %></li>
 </ul>
 <% @cats.each do |cat| %>
   <img src="<%= cat.url %>" alt="Cat pic">
